@@ -1,0 +1,16 @@
+/*
+Theme Name: Apium
+Description: Base style for the apium web
+Version: 0.0.1
+Tags: apium
+Author: Laura Vilar
+Author URI: http://www.lauravilarruiz.es
+License: The CSS, XHTML and design is released under GPL
+License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+@import url("css/bootstrap.css");
+@import url("css/bootstrap-responsive.css");
+@import url("css/apium.css");
+@import url("css/xavi.css");
+

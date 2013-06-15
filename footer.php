@@ -29,6 +29,20 @@
 <script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-collapse.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-carousel.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-typeahead.js"></script>
+
+<script src="<?php echo get_template_directory_uri() ?>/lib/angular/angular.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/angular/angular-resource.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/angular/angular-ui.min.js"></script>
+
+
+
+<script src="<?php echo get_template_directory_uri() ?>/js/app.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/services.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/dummyController.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/filters.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/directives.js"></script>
+
+
 <script>
     !function ($) {
         $(function(){

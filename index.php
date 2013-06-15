@@ -2,7 +2,7 @@
 
 <?php if ( is_home() ) { ?>
 
-<?php require_once "page_content.php"; ?>
+<?php require_once "partials/page_content.php"; ?>
 
 
 <? } else { ?>

@@ -27,7 +27,13 @@
 
 	?></title>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+
 <!--[if IE]><link type="text/css" href="<?php echo get_template_directory_uri() ?>/css/ie.css" rel="stylesheet" media="all" /><![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri() ?>/js/html5shiv.js"></script>
+    <![endif]-->
 
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php if ( is_singular() && get_option( 'thread_comments' ) )
@@ -40,58 +46,63 @@
 
 
 
-<body <?php body_class(); ?>>
+<body>
 
-<!-- MENU -->
-<div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
+<!-- MENU TABLET AND DESKTOP -->
+<div class="navbar-wrapper hidden-phone">
 
-            <!-- Logo de apium -->
-            <a class="logo" title="IT Consulting Apium Technologies" href="#"></a>
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container">
 
-            <!-- Menú -->
-            <div class="navbar">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner apiumnavbar-inner">
 
-                <ul class="nav apium">
-                    <li id="home">
-                        <a  href="javascript:"><br>
-                            <i> </i>
-                            Home</a>
-                    </li>
-                    <li id="team">
-                        <a  href="#whoarewe"><br>
-                            <i> </i>
-                            Team</a></li>
-                    <li id="contact">
-                        <a  href="#contactus"><br>
-                            <i> </i>
-                            Contact</a></li>
-                    <li id="blog">
-                        <a  href="#"><br>
-                            <i> </i>
-                            Blog</a></li>
+                <a class="brandapium" href="#">Apium Technologies</a>
+
+                <ul class="navapium">
+                    <li><a class="home active" href="#"><br><i> </i>Home</a></li>
+                    <li><a class="team" href="#whoarewe"><br><i> </i>Team</a></li>
+                    <li><a class="contact" href="#contactus"><br><i> </i>Contact</a></li>
+                    <li><a class="blog" href="#"><br><i> </i>Blog</a></li>
                 </ul>
-            </div><!-- navbar menu -->
+
+            </div><!-- end apium navbar -->
+        </div><!-- end navbar fixed -->
+    </div> <!-- container -->
+</div><!-- navbar-wrapper -->
+
+<!-- MENU PHONE -->
+<div class="navbar-wrapper visible-phone">
+
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container">
+
+        <!-- top logo -->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner apiumnavbar-inner">
+                <a class="brandapium" href="#">Apium<br><small>Technologies</small></a>
+            </div>
         </div>
-    </div>
-</div>
+
+        <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner apiumnavbar-inner">
+
+                <ul class="navapium">
+                    <li><a class="home active" href="#"><br><i class="hidden-phone"> </i>Home</a></li>
+                    <li><a class="team" href="#whoarewe"><br><i class="hidden-phone"> </i>Team</a></li>
+                    <li><a class="contact" href="#contactus"><br><i class="hidden-phone"> </i>Contact</a></li>
+                    <li><a class="blog" href="#"><br><i class="hidden-phone"> </i>Blog</a></li>
+                </ul>
+
+            </div><!-- end apium navbar -->
+        </div><!-- end navbar fixed -->
+    </div> <!-- container -->
+</div><!-- navbar-wrapper -->
 
 
 
-<div class="container_16">
-<div id="header" class="grid_16">
-<div class="bloginfo">
- <span><?php bloginfo('description'); ?></span>
- <?php $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
- <<?php echo $heading_tag; ?> id="site-title"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo('name'); ?></a></<?php echo $heading_tag; ?>>
-</div>
-<div class="search">
-		<?php get_search_form(); ?>
-</div>
-  
-</div>
-<hr />
+<div>
+
 			<?php if ( is_404() || is_category() || is_day() || is_month() ||
 						is_year() || is_search() || is_paged() || is_tag() ) {
 			?>
@@ -124,5 +135,5 @@
 
 			<?php } ?>
 </div>
-<hr />
+
 			<?php }?>

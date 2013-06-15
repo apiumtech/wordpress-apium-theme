@@ -5,20 +5,39 @@
     <?php if ( !dynamic_sidebar('For Tag Cloud widget') ) : ?>
     <?php endif; ?>
 <?php } ?>
-<hr />
+
+
 <div class="footer">
     <p class="text-center"><small>&copy; Apium Technologies LTD 2013</small></p>
 </div>
 </div>
 <?php wp_footer(); ?>
 
-<!-- Javascrip and Jquery -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script language="javascript">
-    $('.carousel').carousel();
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="<?php echo get_template_directory_uri() ?>/lib/jquery/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-transition.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-alert.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-modal.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-dropdown.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-scrollspy.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-tab.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-tooltip.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-popover.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-button.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-collapse.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-carousel.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/bootstrap-typeahead.js"></script>
+<script>
+    !function ($) {
+        $(function(){
+            // carousel demo
+            $('.myCarousel').carousel()
+        })
+    }(window.jQuery)
 </script>
+<script src="<?php echo get_template_directory_uri() ?>/lib/bootstrap/holder/holder.js"></script>
 </body>
 <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
 </html>

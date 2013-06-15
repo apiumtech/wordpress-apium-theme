@@ -60,10 +60,10 @@
                 <a class="brandapium" href="#">Apium Technologies</a>
 
                 <ul class="navapium">
-                    <li><a class="home active" href="#"><br><i> </i>Home</a></li>
-                    <li><a class="team" href="#whoarewe"><br><i> </i>Team</a></li>
-                    <li><a class="contact" href="#contactus"><br><i> </i>Contact</a></li>
-                    <li><a class="blog" href="#"><br><i> </i>Blog</a></li>
+                    <li><a class="home active" href="#" ng-click="goWithSabrosura(0)"><br><i> </i>Home</a></li>
+                    <li><a class="team" href="#" ng-click="goWithSabrosura(100)"><br><i> </i>Team</a></li>
+                    <li><a class="contact" href="#" ng-click="goWithSabrosura(300)"><br><i> </i>Contact</a></li>
+                    <li><a class="blog" href="#" ng-click="goWithSabrosura(500)"><br><i> </i>Blog</a></li>
                 </ul>
 
             </div><!-- end apium navbar -->

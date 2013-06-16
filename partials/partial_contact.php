@@ -8,51 +8,25 @@
  */
 ?>
 
-
-<!-- CONTACT -->
-
-
 <div id="contactus" class="container-fluid apiumcontactfluid">
 
     <div class="container">
         <h3>Questions?<cite>Contact us, it's free and worthy!</cite></h3>
-        <form class="span8 offset2">
-            <p class="text-right"><small>*All fields are mandatory</small></p>
+        <form class="span8 offset2" >
 
-            <!-- ejemplo de input con error -->
-            <div class="control-group error">
-                <label class="control-label" for="inputError">Please, write your name</label>
-                <div class="controls">
-                    <input class="span8" type="text" placeholder="Name" id="inputName">
-                </div>
-            </div>
+            <input class="span8" type="text" placeholder="Name" ng-model="contactForm.name" required>
 
-            <!-- ejemplo de input bien cumplimentado que se comprueba en el momento y le da feedback inmediato al usuario -->
-            <div class="control-group success">
-                <label class="control-label" for="inputSuccess">Well done! This is a valid email</label>
-                <div class="controls">
-                    <input class="span8" type="text" placeholder="Email" id="inputEmail">
-                </div>
-            </div>
+            <input class="span8" type="text" placeholder="Email" ng-model="contactForm.mail" required>
 
-            <input class="span8" type="text" placeholder="Phone" id="inputPhone">
-            <select class="muted span8" type="text" placeholder="How did you know about us?" id="inputFind">
-                <option value="" class="muted">How did you know about us?</option>
-                <option value="Searching on Internet">Searching on Internet</option>
-                <option value="Someone's recommendation">Someone's recommendation</option>
-                <option value="Through Linkedin">Through Linkedin</option>
-                <option value="Through Apium's blog">Through Apium's blog</option>
-                <option value="Through Apium's twitter">Through Apium's twitter</option>
-                <option value="Others">Others</option>
-            </select>
-            <textarea class="span8" placeholder="Message" id="inputMessage" type="text" rows="2"></textarea>
+            <input class="span8" type="text" placeholder="Phone" ng-model="contactForm.phone">
 
-            <!-- message sent successfuly -->
-            <div class="alert alert-success clearfix text-center">
-                <b>Your message is on us right now!</b> Thanks for contacting! We'll be in touch in a sigh! :)
-            </div>
+            <select class="muted span8" placeholder="How did you know about us?" ng-model="contactForm.find" ng-options="s for s in findSources"></select>
 
-            <button class="span8 btn btn-primary" type="submit">Send</button>
+            <textarea class="span8" placeholder="Message" rows="3" ng-model="contactForm.message"></textarea>
+
+            <button class="span8 btn btn-primary" type="submit" ng-click="submitContactForm()">Send</button>
+
         </form>
-    </div><!-- end container -->
-</div><!-- end container contact fluid -->
+
+    </div>
+</div>

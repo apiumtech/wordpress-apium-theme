@@ -10,7 +10,24 @@ function apiumMainPageController($scope)
         $scope.screenOnFront = steps;
 
     };
-    $scope.dummyMethod = function(){
+
+    $scope.contactForm = {
+        name: "",
+        mail: "",
+        phone: "",
+        find: "",
+        message: ""
+    };
+    $scope.findSources = [
+        "Searching on Internet",
+        "Someone's recommendation",
+        "Through Linkedin",
+        "Through Apium's blog",
+        "Through Apium's twitter",
+        "Others"
+    ]
+
+    $scope.submitContactForm = function(){
         return $scope.var;
     }
 }
